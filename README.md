@@ -2,6 +2,8 @@
 
 A React Component To make live editable demos of other React Components. Great for documentation.
 
+#### <a href='http://conor.rodeo/react-component-demo'>Demo</a>
+
 ### Install
 
 `npm install react-component-demo --save`
@@ -15,7 +17,7 @@ A React Component To make live editable demos of other React Components. Great f
 * `codeContainerStyle` - optional prop to edit style of code container
 * `componentContainerStyle` - optional prop to edit style of component container
 
-```js
+```jsx
 import React from 'react';
 import { render } from 'react-dom';
 import ComponentDemo from 'react-component-demo';
