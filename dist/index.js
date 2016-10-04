@@ -110,7 +110,7 @@ var _initialiseProps = function _initialiseProps() {
 
   this.onKeyup = (0, _lodash2.default)(function () {
     var props = _this3.node.innerText.split('\n');
-    var updatedProps = props.slice(1, props.length - 2).reduce(function (props, prop) {
+    var updatedProps = props.slice(1, props.length - 1).reduce(function (props, prop) {
       var _prop$trim$split = prop.trim().split("=");
 
       var _prop$trim$split2 = _slicedToArray(_prop$trim$split, 2);
@@ -118,8 +118,12 @@ var _initialiseProps = function _initialiseProps() {
       var key = _prop$trim$split2[0];
       var value = _prop$trim$split2[1];
 
-      value = JSON.parse(value.substr(1, value.length - 2));
-      props[key] = value;
+      try {
+        value = JSON.parse(value.substr(1, value.length - 2));
+        props[key] = value;
+      } catch (e) {
+        //ignore
+      }
       return props;
     }, {});
     _this3.setState(updatedProps);
