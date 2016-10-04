@@ -4,6 +4,8 @@ A React Component To make live editable demos of other React Components. Great f
 
 #### <a href='http://conor.rodeo/react-component-demo'>Demo</a>
 
+<img src='http://i.imgur.com/9ah89vu.gif' />
+
 ### Install
 
 `npm install react-component-demo --save`
