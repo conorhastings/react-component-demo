@@ -42,13 +42,13 @@ export default class ComponentDemo extends React.Component {
   }
 
   render() {
-    const { Component, name, codeContainerStyle, componentContainerStyle } = this.props;
+    const { Component, name, codeContainerStyle, componentContainerStyle, ...rest } = this.props;
     const codeString = `${Object.keys(this.state).reduce((codeString, prop) => (
       codeString + `\n  ${prop}={${JSON.stringify(this.state[prop])}}`
     ), `<${name}`)}\n/>`;
 
     return (
-      <div>
+      <div {...rest}>
         <div ref={node => this.node = node}>
           <SyntaxHighlighter language="javascript" style={rainbow} customStyle={codeContainerStyle || {}}>
             {codeString}
