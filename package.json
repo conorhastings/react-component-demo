@@ -1,6 +1,6 @@
 {
   "name": "react-component-demo",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "a higher order component to create an editable demo of a react component",
   "main": "dist/index.js",
   "scripts": {
