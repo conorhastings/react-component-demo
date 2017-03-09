@@ -18,6 +18,7 @@ A React Component To make live editable demos of other React Components. Great f
 * `props` - an object with the props for the component (these will be editable)
 * `codeContainerStyle` - optional prop to edit style of code container
 * `componentContainerStyle` - optional prop to edit style of component container
+* Any other props will be transferred to the root element
 
 ```jsx
 import React from 'react';
@@ -34,7 +35,7 @@ function TestComponent({ backgroundColor, color, height }) {
 
 function Demo() {
   return (
-    <ComponentDemo 
+    <ComponentDemo
       Component={TestComponent}
       name='TestComponent'
       props={{
